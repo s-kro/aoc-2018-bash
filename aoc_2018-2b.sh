@@ -6,8 +6,8 @@ input="aoc_2018-2.dat"
 
 box_ids=()
 
-while IFS= read -r line; do
-    box_ids+=($line)
+while IFS= read -ra line; do
+    box_ids+=(${line[@]})
 done < "$input" 
 
 for id in "${box_ids[@]}"; do
